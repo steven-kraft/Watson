@@ -59,7 +59,7 @@ class Frame(namedtuple('Frame', HEADERS)):
 
 
 class Span(object):
-    def __init__(self, start, stop, timeframe='day'):
+    def __init__(self, start, stop, timeframe='second'):
         self.timeframe = timeframe
         self.start = start.floor(self.timeframe)
         self.stop = stop.ceil(self.timeframe)
